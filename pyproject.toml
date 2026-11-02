@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "customer-world"
+version = "0.1.0"
+description = "Autonomous customer research for product teams. Used at Habitude."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: POSIX",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+]
+dependencies = []
+
+[project.scripts]
+customer-world = "customer_world.cli:main"
+
+[project.urls]
+Repository = "https://github.com/legott-ai/customer-world"
+Issues = "https://github.com/legott-ai/customer-world/issues"
+Documentation = "https://github.com/legott-ai/customer-world/tree/main/docs"
+
+[tool.setuptools.packages.find]
+include = ["customer_world*"]
